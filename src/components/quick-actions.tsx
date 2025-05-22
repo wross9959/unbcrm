@@ -8,13 +8,14 @@ import { useRouter } from "next/navigation"
 import { useToast } from "@/hooks/use-toast"
 
 export function QuickActions() {
-  const router = useRouter()
+  const router = useRouter();
+  const { toast } = useToast();
   const [actionInProgress, setActionInProgress] = useState<string | null>(null)
   
 
   const handleAction = (action: string, path: string) => {
     setActionInProgress(action)
-    const { toast } = useToast();
+    
     // Simulate API call
     setTimeout(() => {
       setActionInProgress(null)
@@ -32,7 +33,7 @@ export function QuickActions() {
   }
 
   const actions = [
-    { id: "member", label: "Add Member", icon: UserPlus, path: "/members" },
+    { id: "member", label: "Add Member", icon: UserPlus, path: "/members/new" },
     { id: "event", label: "Create Event", icon: CalendarPlus, path: "/events" },
     { id: "project", label: "New Project", icon: FolderPlus, path: "/projects" },
     { id: "resource", label: "Upload Resource", icon: FileUp, path: "/resources" },

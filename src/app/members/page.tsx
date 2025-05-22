@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -99,6 +100,8 @@ export default function MembersPage() {
                                 type="submit"
                                 form="form-notifications"
                                 variant="secondary"
+                                onClick={() => window.location.href = "/members/new"}
+                                
                             >
                                 <Plus className="h-3.5 w-3.5" />
                                 <span>Add Member</span>
