@@ -39,7 +39,7 @@ const NavBar = () => {
 
             <div className="flex items-center gap-4">
                 {/* USER MENU  */}
-                <Link href="/">Dashboard</Link>
+                {/* <Link href="/">Dashboard</Link> */}
 
                 {/* THEME MENU  */}
                 <DropdownMenu>
